@@ -41,7 +41,7 @@ These XAML elements enable developer to specify composition animations directly 
 | RotationInDegreesAnimation | ScalarKeyFrame and ExpressionKeyFrame  |                 ScalarAnimation where \`Target = "RotationAngleInDegrees". Animates the Visual.RotationAngleInDegrees property                  |
 |       ScaleAnimation       | Vector3KeyFrame and ExpressionKeyFrame |                                  Vector3Animation where \`Target = "Scale". Animates the Visual.Scale property                                  |
 |    TranslationAnimation    | Vector3KeyFrame and ExpressionKeyFrame |                            Vector3Animation where \`Target = "Translation". Animates the Visual.Translation property                            |
-|      OffsetAnimations      | Vector3KeyFrame and ExpressionKeyFrame |                                 Vector3Animation where \`Target = "Offset". Animates the Visual.Offset property                                 |
+|      OffsetAnimation      | Vector3KeyFrame and ExpressionKeyFrame |                                 Vector3Animation where \`Target = "Offset". Animates the Visual.Offset property                                 |
 
 ### Animation Properties
 
@@ -120,11 +120,11 @@ Let's create some plain animation first. Theses animation will run when the `Tar
 - Creating a animation that takes final value as `To` value. If you didn't set From/To value or any KeyFrames then in this case, an ExpressionKeyFrame will be added of `Value="this.FinalValue"`.
 
     ```xaml
-    <animations:OffsetAnimations Duration="0:0:1"/>
+    <animations:OffsetAnimation Duration="0:0:1"/>
     ```
 
     > [!NOTE]
-    OffsetAnimations is equivalent to setting `Target = "Offset"` in Vector3Animation. So there is no Target property.
+    OffsetAnimation is equivalent to setting `Target = "Offset"` in Vector3Animation. So there is no Target property.
 - Creating an animation which runs when another property changes. You can use `ImplicitTarget`. Whenever ImplicitTarget property changes the animation will run. In this example, if Offset changes then the ScaleAnimation will run.
 
     ```xaml
